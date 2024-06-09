@@ -12,3 +12,17 @@ def revert_int_option_2(num):
 
 print(revert_int_option_1(12345))
 print(revert_int_option_2(12345))
+
+
+
+# 1.2 Напишите программу, которая проверяет, является ли число числом Армстронга. 
+# Число Армстронга — натуральное число, которое в данной системе счисления равно сумме своих цифр, возведённых в степень, равную количеству его цифр.
+
+def armstrong_number(num):
+    sum = 0
+    length = len(str(num))
+    for digit in list(str(num)):
+        sum += int(digit)**length
+    return sum == num
+
+print(armstrong_number(371))
