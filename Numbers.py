@@ -37,3 +37,15 @@ def prime_num(num):
 
 for item in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]:
     print(f"{item}: {prime_num(item)}")
+
+
+# 1.4 Напишите программу, которая построит список чисел Фибоначчи через итеративный метод.
+
+
+def fibonacci(length):
+    lst = [0, 1]
+    for item, index in enumerate(range(2, length)):
+        lst.append(lst[index-2] + lst[index-1])
+    return lst
+
+print(fibonacci(14))
