@@ -49,3 +49,20 @@ def fibonacci(length):
     return lst
 
 print(fibonacci(14))
+
+
+# 1.5 Напишите программу, которая построит список чисел Фибоначчи через рекурсию. 
+#     Числа Фибоначчи - элементы числовой последовательности, в которой первые два числа равны 0 и 1, а каждое последующее число равно сумме двух предыдущих чисел.
+
+def fibonacci(length):
+    lst = [0, 1]
+    return calculate_next(lst, length)
+
+def calculate_next(lst, length):
+    if len(lst) < length:
+        lst.append(lst[-2] + lst[-1])
+        return calculate_next(lst, length)
+    else:
+        return lst
+
+print(fibonacci(14))
