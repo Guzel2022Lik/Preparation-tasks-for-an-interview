@@ -66,3 +66,14 @@ def calculate_next(lst, length):
         return lst
 
 print(fibonacci(14))
+
+
+# 1.6 Напишите программу, которая посчитает факториал от заданного числа (через рекурсию).
+
+def factorial(x):
+    if x == 1:
+        return x
+    else:
+        return x * factorial(x-1)
+
+print(factorial(5))
