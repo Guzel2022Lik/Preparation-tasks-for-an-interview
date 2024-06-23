@@ -77,3 +77,15 @@ def factorial(x):
         return x * factorial(x-1)
 
 print(factorial(5))
+
+
+# 1.7 Напишите программу, которая проверит, является ли число палиндромом.
+
+def prime_num(num):
+    for div_num in range(2, num):
+        if num % div_num == 0:
+            return False
+    return True
+
+for item in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]:
+    print(f"{item}: {prime_num(item)}")
