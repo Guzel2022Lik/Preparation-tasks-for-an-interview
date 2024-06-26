@@ -89,3 +89,19 @@ def prime_num(num):
 
 for item in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]:
     print(f"{item}: {prime_num(item)}")
+
+
+# 1.8 Напишите программу, которая проверит, является ли число палиндромом (итеративным способом).
+
+def is_palindrome(num):
+    str_num = str(num)
+    median = len(str_num)//2
+    for index in range(0, median):
+        if str_num[index] != str_num[len(str_num)-index-1]:
+            return False
+    return True
+
+print(is_palindrome(54321))
+print(is_palindrome(543821))
+print(is_palindrome(5346435))
+print(is_palindrome(53466435))
