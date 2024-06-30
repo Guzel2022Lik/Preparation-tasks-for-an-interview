@@ -105,3 +105,24 @@ print(is_palindrome(54321))
 print(is_palindrome(543821))
 print(is_palindrome(5346435))
 print(is_palindrome(53466435))
+
+
+# 1.9 Напишите программу, которая проверит, является ли число палиндромом (через рекурсию).
+
+def is_palindrome(num):
+    str_num = str(num)
+    median = len(str_num)//2
+    return check_equalness(str_num, 0, median)
+
+def check_equalness(num, index, median):
+    if index >= median:
+        return True
+    else:
+        if num[index] != num[len(num)-index-1]:
+            return False
+        return check_equalness(num, index+1, median)
+
+print(is_palindrome(54321))
+print(is_palindrome(543821))
+print(is_palindrome(5346435))
+print(is_palindrome(53466435))
