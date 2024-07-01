@@ -126,3 +126,25 @@ print(is_palindrome(54321))
 print(is_palindrome(543821))
 print(is_palindrome(5346435))
 print(is_palindrome(53466435))
+
+
+# 1.10 Напишите программу, которая определит наибольшее из трех целых чисел
+
+# Вариант решения 1
+def max(a, b, c):
+    if a > b:
+        return a if a > c else c
+    else:
+        return b if b > c else c
+
+# Вариант решения 2
+def max(a, b, c):
+    lst = [a, b, c]
+    lst.sort(reverse=True)
+    return lst[0]
+
+# Тесты
+print(max(1, 2, 3))
+print(max(3, 2, 1))
+print(max(1, 3, 2))
+print(max(1, 1, 1))
