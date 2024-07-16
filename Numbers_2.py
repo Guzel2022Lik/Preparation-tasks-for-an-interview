@@ -40,3 +40,12 @@ print(perfect_num(6))
 print(perfect_num(28))
 print(perfect_num(496))
 print(perfect_num(8128))
+
+
+# 1.14
+# Напишите программу, которая найдет среднее арифметическое списка чисел
+
+def average(lst):
+    return sum(lst) / len(lst)
+
+print(average([1, 5, 10, 35, 234, 1, 6, 8]))
