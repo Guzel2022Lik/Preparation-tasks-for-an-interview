@@ -49,3 +49,21 @@ def average(lst):
     return sum(lst) / len(lst)
 
 print(average([1, 5, 10, 35, 234, 1, 6, 8]))
+
+# 1.15 Напишите программу, которая выведет первые N простых чисел
+
+def simple(num):
+    for i in range(2, num):
+        if num % i == 0:
+            return False
+    return True
+
+n = 10
+simple_numbers = [1]
+index = 1
+while len(simple_numbers) < 10:
+    index += 1
+    if simple(index):
+        simple_numbers.append(index)
+
+print(simple_numbers)
