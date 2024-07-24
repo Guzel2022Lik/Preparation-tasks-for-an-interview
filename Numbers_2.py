@@ -67,3 +67,23 @@ while len(simple_numbers) < 10:
         simple_numbers.append(index)
 
 print(simple_numbers)
+
+
+# 1.16 Напишите программу, которая выведет простые числа в заданном диапазоне
+
+
+def simple(num):
+    for i in range(2, num):
+        if num % i == 0:
+            return False
+    return True
+
+start = 5
+end = 50
+simple_numbers = [1] if start == 1 else []
+index = start
+for index in range(start, end):
+    if simple(index):
+        simple_numbers.append(index)
+
+print(simple_numbers)
