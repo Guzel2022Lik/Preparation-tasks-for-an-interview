@@ -87,3 +87,18 @@ for index in range(start, end):
         simple_numbers.append(index)
 
 print(simple_numbers)
+
+
+# 1.17
+# Напишите программу, которая найдет наименьшее общее кратное двух чисел. 
+# Наименьшее общее кратное двух чисел - это наименьшее натуральное число, которое делится без остатка на оба числа.
+
+def less_comm_multiple(a, b):
+    index = 2
+    while True:
+        if index % a == 0 and index % b == 0:
+            return index
+        index += 1
+
+print(less_comm_multiple(5, 7))
+print(less_comm_multiple(10, 3))
