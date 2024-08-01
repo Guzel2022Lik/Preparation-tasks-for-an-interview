@@ -102,3 +102,23 @@ def less_comm_multiple(a, b):
 
 print(less_comm_multiple(5, 7))
 print(less_comm_multiple(10, 3))
+
+
+# 1.18
+# Напишите программу, которая найдет наибольший общий делитель двух чисел. 
+# Наибольший общий делитель - это наибольшее число, на которое числа делятся без остатка
+
+def divisors(num):
+    lst = [1]
+    for i in range(2, num+1):
+        if num % i == 0:
+            lst.append(i)
+    return lst
+
+def greatest_common_divisor(a, b):
+    common = set(divisors(a)) & set(divisors(b))
+    return max(common)
+
+print(greatest_common_divisor(4, 16))
+print(greatest_common_divisor(13, 48))
+print(greatest_common_divisor(15, 70))
