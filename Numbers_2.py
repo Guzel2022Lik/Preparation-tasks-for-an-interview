@@ -122,3 +122,18 @@ def greatest_common_divisor(a, b):
 print(greatest_common_divisor(4, 16))
 print(greatest_common_divisor(13, 48))
 print(greatest_common_divisor(15, 70))
+
+
+# 1.19. Напишите программу, которая переведет десятичное число в двоичное.
+
+
+def decimal_to_binary(decimal):
+    binary_lst = []
+    while True:
+        binary_lst.append(str(decimal % 2))
+        if decimal <= 1:
+            return ''.join(reversed(binary_lst))
+        decimal //= 2
+
+print(decimal_to_binary(8))
+print(decimal_to_binary(10))
